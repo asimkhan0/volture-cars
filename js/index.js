@@ -1,4 +1,4 @@
-let currrentColor = "black"
+let currrentColor = "Black"
 let brakeColor = "Default"
 let stitchColor = "Default"
 
@@ -151,6 +151,7 @@ tabs.forEach(tab => {
 
 
 tyreButton.addEventListener("click",()=> {
+    goToSlide(3)
     tabContents.forEach(tabContent => {
         tabContent.classList.remove('active')
     })
@@ -161,8 +162,7 @@ tyreButton.addEventListener("click",()=> {
     tyres.classList.add('active')
     brakes_tab.classList.add('active')
 
-    goToSlide(3)
-    if(currrentColor === 'black' ){
+    if(currrentColor === 'Black' ){
         image_04.src = `images/tyre_black.jpg`;
     }
     else if(currrentColor === 'white' ){
@@ -204,9 +204,10 @@ configButton.addEventListener("click",()=> {
 // ............................................................................
 
 tyre_1.addEventListener('click', function() {
+    console.log("Clicked")
     brakeColor = "blue"
     paragraph_2.innerHTML = "Blue"
-    if(currrentColor == 'black' ){
+    if(currrentColor == 'Black' ){
         image_04.src = `images/tyre_black_blue.jpg`;
         goToSlide(3)
     }
@@ -225,9 +226,10 @@ tyre_1.addEventListener('click', function() {
 });
 
 tyre_2.addEventListener('click', function() {
+    console.log("Clicked")
     brakeColor = "yellow"
     paragraph_2.innerHTML = "Yellow"
-    if(currrentColor == 'black' ){
+    if(currrentColor == 'Black' ){
         image_04.src = `images/tyre_black.jpg`;
         goToSlide(3)
     }
@@ -246,9 +248,10 @@ tyre_2.addEventListener('click', function() {
 });
 
 tyre_3.addEventListener('click', function() {
+    console.log("Clicked")
     brakeColor = "orange"
     paragraph_2.innerHTML = "Orange"
-    if(currrentColor == 'black' ){
+    if(currrentColor == 'Black' ){
         image_04.src = `images/tyre_black_orange.jpg`;
         goToSlide(3)
     }
@@ -379,7 +382,7 @@ close.addEventListener("click",function (){
 
 brakes_tab.addEventListener("click",function (){
     goToSlide(3)
-    if(currrentColor === 'black' ){
+    if(currrentColor === 'Black' ){
         image_04.src = `images/tyre_black.jpg`;
     }
     else if(currrentColor === 'white' ){
@@ -396,7 +399,7 @@ brakes_tab.addEventListener("click",function (){
 colors_tab.addEventListener("click",function (){
     goToSlide(0)
 
-    if(currrentColor === 'black' ){
+    if(currrentColor === 'Black' ){
         image_04.src = `images/tyre_black.jpg`;
     }
     else if(currrentColor === 'white' ){
