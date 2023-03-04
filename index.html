@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 <body class="
 		sparse
@@ -54,16 +56,19 @@
                         <button class="controls" id="previous">&#8249;</button>
                     </div>
                     <li class="slide showing">
-                        <img class="showImage" id="product-image"  src="images/offfront_black.jpg">
+                        <img class="showImage" id="product-image"  src="images/Black/black/1.jpg">
                     </li>
                     <li class="slide">
-                        <img class="showImage" id="product-image-2"  src="images/side_black.jpg">
+                        <img class="showImage" id="product-image-2"  src="images/Black/black/2.jpg">
                     </li>
                     <li class="slide">
-                        <img class="showImage" id="product-image-3"  src="images/offrear_black.jpg">
+                        <img class="showImage" id="product-image-3"  src="images/Black/black/3.jpg">
                     </li>
                     <li class="slide">
-                        <img class="showImage" id="product-image-4"  src="images/tyre_black.jpg">
+                        <img class="showImage" id="product-image-4"  src="images/Black/black/4.jpg">
+                    </li>
+                    <li class="slide">
+                        <img class="showImage" id="product-image-5"  src="images/Black/black/5.jpg">
                     </li>
 <!--                    <li class="slide">-->
 <!--                        <img class="showImage" id="product-image-5"  src="images/seat_black.jpg">-->
@@ -89,6 +94,7 @@
             <div class="ui">
                 <ul class="tabs section-title">
                     <li data-tab-target="#color" id="colors_tab"  class="tab active">Car Colors</li>
+<!--                    <li data-tab-target="#rims" id="brakes_rims" class="tab">Rim Colors</li>-->
                     <li data-tab-target="#tyres" id="brakes_tab" class="tab">Brakes Colors</li>
                     <li data-tab-target="#stitch" id="stitch_tab" class="tab">Stitching Colors</li>
                     <li data-tab-target="#configuration" id="configuration_tab" class="tab">Your configuration</li>
@@ -96,38 +102,53 @@
                 <div class="tab-content">
                     <div id="color" data-tab-content class="tab-content-list active">
                         <div role="group" class="choices color">
+
                             <input id="art-color-1" name="color" type="radio" data-object-list="w-463a/amg-g-63" checked value="offrear_black.jpg">
                             <label for="art-color-1" class="choice">
                                 <span class="image"><img src="images/png-UIPaint_01_Black.png" alt=""></span>
-                                Black metallic
-
+                                Black
                             </label>
                             <input id="art-color-2" name="color" type="radio" data-object-list="w-463a/amg-g-63" value="polar_white">
                             <label for="art-color-2" class="choice ">
                                 <span class="image"><img src="images/png-UIPaint_02_PolarWhite.png" alt=""></span>
-                                Polar white
+                                Frosted Glass Blue
 
                             </label>
                             <input id="art-color-7" name="color" type="radio" data-object-list="w-463a/amg-g-63" value="cardinal_red_metallic">
                             <label for="art-color-7" class="choice ">
-                                <span class="image"><img src="images/png-UIPaint_08_LunarBlueMetallic.png" alt=""></span>
-                                Blue metallic
+                                <span class="image"><img style="width: 100px; height: 100px" src="images/blue.png" alt=""></span>
+                                Blue
 
                             </label>
                             <input id="art-color-8" name="color" type="radio" data-object-list="w-463a/amg-g-63" value="cardinal_red_metallic">
                             <label for="art-color-8" class="choice ">
-                                <span class="image"><img src="images/png-UIPaint_11_SeleniteGreyMetallic.png" alt=""></span>
-                                Grey Metallic
+                                <span class="image"><img src="images/png-UIPaint_08_LunarBlueMetallic.png" alt=""></span>
+                                Purple
+                            </label>
+                            <input id="art-color-6" name="color" type="radio" data-object-list="w-463a/amg-g-63" value="cardinal_red_metallic">
+                            <label for="art-color-6" class="choice ">
+                                <span class="image"><img src="images/png-UIPaint_10_EmeraldGreenMetallic.png" alt=""></span>
+                                Green
                             </label>
                         </div>
                         <div class="fill-form-btn">
-                            <span id="select-tyres-btn" class="fill-form">Select tyres</span>
+                            <span id="select-tyres-btn" class="fill-form">Select Brakes</span>
                         </div>
                     </div>
                     <div id="tyres" data-tab-content class="tab-content-list">
                         <div role="group" class="choices 23">
-                            <input id="art-R12-Z23-PE" name="wheels" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
-                            <label for="art-R12-Z23-PE" class="choice ">
+                            <input id="art-RIM-Z23-PE-Black" name="wheels" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part" checked>
+                            <label for="art-RIM-Z23-PE-Black" class="choice">
+                                <span class="image"><img src="images/black.jpg" alt=""></span>
+                                Black
+                            </label>
+                            <input id="art-RIM-Z23-PE-Silver" name="wheels" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
+                            <label for="art-RIM-Z23-PE-Silver" class="choice">
+                                <span class="image"><img src="images/silver.jpg" alt=""></span>
+                                Silver
+                            </label>
+                            <input id="art-RIM-Z23-PE" name="wheels" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
+                            <label for="art-RIM-Z23-PE" class="choice">
                                 <span class="image"><img src="images/side_SeleniteGreyMetallic-modified.png" alt=""></span>
                                 Blue Edition
                             </label>
@@ -143,25 +164,39 @@
                             </label>
                         </div>
                         <div class="fill-form-btn">
-                            <span  id="select-stitch-btn" class="fill-form" href="form.html">Select stitch</span>
+                            <span  id="select-stitch-btn" class="fill-form" >Select stitch</span>
                         </div>
                     </div>
+<!--                    <div id="rims" data-tab-content class="tab-content-list">-->
+<!--                        <div role="group" class="choices 23">-->
+<!--                            <input id="art-R12-Z23-PE" name="wheels" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">-->
+<!--                            <label for="art-R12-Z23-PE" class="choice">-->
+<!--                                <span class="image"><img src="images/side_SeleniteGreyMetallic-modified.png" alt=""></span>-->
+<!--                                Blue Edition-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div id="stitch" data-tab-content class="tab-content-list">
                         <div role="group" class="choices 23">
+                            <input id="art-stitch-PE-2" checked name="stitch" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
+                            <label for="art-stitch-PE-2" class="choice ">
+                                <span class="image"><img src="images/blue.png" alt=""></span>
+                                Blue
+                            </label>
                                 <input id="art-stitch-PE" name="stitch" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63" value="r23pe"  data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
                                 <label for="art-stitch-PE" class="choice ">
                                     <span class="image"><img src="images/orange.png" alt=""></span>
                                     Orange
                                 </label>
-                                <input id="art-stitch-PE-2" name="stitch" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
-                                <label for="art-stitch-PE-2" class="choice ">
-                                    <span class="image"><img src="images/blue.png" alt=""></span>
-                                    Blue
-                                </label>
                                 <input id="art-stitch-PE-3" name="stitch" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
                                 <label for="art-stitch-PE-3" class="choice ">
                                     <span class="image"><img src="images/yellow.png" alt=""></span>
                                     Yellow
+                                </label>
+                                <input id="art-stitch-PE-4" name="stitch" type="radio" data-object-number="R12-Z23-PE" data-object-list="w-463a/amg-g-63"   data-object-identifier="2a46ede3-7c4a-4ac9-a1de-4b1ab8a1da6c" data-article-type="part">
+                                <label for="art-stitch-PE-4" class="choice ">
+                                    <span class="image"><img src="images/png-UIPaint_15_CardinalRedMetallic.png" alt=""></span>
+                                    Red
                                 </label>
                         </div>
                         <div class="fill-form-btn">
@@ -172,7 +207,7 @@
                         <div class="config-main">
                             <div class="summary-card">
 <!--                                <p class="summary-title">EQE 300 Business Line</p>-->
-                                <img id="summary-img" class="summary-card-img" src="images/offfront_black.jpg">
+                                <img id="summary-img" class="summary-card-img" src="images/Black/black/1.jpg">
                                 <div class="summary-card-content">
                                     <div class="summary-detail">
                                         <p class="summary-detail-title">Colour:</p>
@@ -202,52 +237,53 @@
                 <span class="close">&times;</span>
                 <div class="formGroup">
                     <div class="bgcolor"></div>
-                    <form class="form">
-                        <div class="radio-btn">
-                            <div class="radio-group">
-                                <input type="radio" id="Mr" name="fav_language" value="Mr">
-                                <label class="label" for="Mr">Mr</label><br>
+                    <form class="form" id="contact-form">
+                        <div>
+                            <div class="radio-btn">
+                                <div class="radio-group">
+                                    <input type="radio" id="Mr" name="fav_language" value="Mr">
+                                    <label class="label" for="Mr">Mr</label><br>
+                                </div>
+                                <div  class="radio-group">
+                                    <input type="radio" id="Madam" name="fav_language" value="Madam">
+                                    <label class="label" for="Madam">Madam</label><br>
+                                </div>
                             </div>
-                            <div  class="radio-group">
-                                <input type="radio" id="Madam" name="fav_language" value="Madam">
-                                <label class="label" for="Madam">Madam</label><br>
+                            <div class="form-item">
+                                <input type="text" id="lastname" autocomplete="off" name="last_name" required>
+                                <label for="lastname">Last Name</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="email" id="email" name="user_email" autocomplete="off" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="number" id="number" name="user_number"  autocomplete="off" required>
+                                <label for="number">Number</label>
+                            </div>
+                            <div class="checkGroup">
+                                <input type="checkbox" checked>
+                                <label class="authorize">I authorize to use the personal data provided to contact me for the service I have requested. </label>
+                            </div>
+                            <div class="statement">
+                                <p>
+                                    Your data will only be provided to the Authorized Volture Cars Service Point specified by you and will not be used for other purposes or provided to third parties.
+                                </p>
                             </div>
                         </div>
-                        <div class="form-item">
-                            <input type="text" id="lastname" autocomplete="off" required>
-                            <label for="lastname">Last Name</label>
+                        <div>
+                            <div class="form-item">
+                                <input type="text" id="code" name="user_code" autocomplete="off" required>
+                                <label for="code">Your unique promotional code</label>
+                            </div>
                         </div>
-                        <div class="form-item">
-                            <input type="email" id="email" autocomplete="off" required>
-                            <label for="email">Email</label>
+                        <div>
+                            <div class="form-item">
+                                <input type="text" id="municipality" name="from_name" autocomplete="off" required>
+                                <label for="municipality">Name or municipality of your Recognized Service Point</label>
+                            </div>
                         </div>
-                        <div class="form-item">
-                            <input type="number" id="number" autocomplete="off" required>
-                            <label for="number">Number</label>
-                        </div>
-                        <div class="checkGroup">
-                            <input type="checkbox">
-                            <label class="authorize">I authorize to use the personal data provided to contact me for the service I have requested. </label>
-                        </div>
-                        <div class="statement">
-                            <p>
-                                Your data will only be provided to the Authorized Volture Cars Service Point specified by you and will not be used for other purposes or provided to third parties.
-                            </p>
-                        </div>
-                    </form>
-                    <form class="form-02">
-                        <div class="form-item">
-                            <input type="text" id="code" autocomplete="off" required>
-                            <label for="code">Your unique promotional code</label>
-                        </div>
-                    </form>
 
-                    <form class="form-02">
-                        <div class="form-item">
-                            <input type="text" id="municipality" autocomplete="off" required>
-                            <label for="municipality">Name or municipality of your Recognized Service Point</label>
-                        </div>
-                    </form>
 
                     <div class="details">
                         <p>* These are recommended maximum prices for full sets of 4 Mercedes Original winter tires mounted on rims, discount already applied, including pressure sensors, balancing and VAT, excluding environmental contribution of € 2.86 including VAT per tire for passenger cars and of € 4.77 including VAT per tire for 4x4s/SUVs. The assembly, wheel hub caps and wheel bolts are not included.</p>
@@ -259,10 +295,11 @@
                             <div><p class="price">Price</p></div>
                             <div><p class="price">€ 3,720.00 incl. VAT *</p></div>
                         </div>
-                        <button onclick="SendButton()" class="reserve">
+                        <button type="submit" class="reserve">
                             Send
                         </button>
                     </div>
+                    </form>
                 </div>
             </div>
 
@@ -270,5 +307,10 @@
 
 
 <script src="js/index.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('rZ8-hy1LWnFnEjQjJ');
+            })();
+        </script>
 </body>
 </html>
